@@ -6,7 +6,7 @@ GuessResponse Wordle::guess(const std::string& word)
     for ( int i = 0 ; i < word.length(); i++){
         if (secret_word[i] == word[i]){
             std::cout << exact_print(word[i]);
-        } else if (secret_word.find(word, 0) != std::string::npos){
+        } else if (secret_word.find(word[i], 0) != std::string::npos){
                 std::cout << contains_print(word[i]);
                 is_correct = false;
         } else {
