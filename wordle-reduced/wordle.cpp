@@ -18,6 +18,10 @@ GuessResponse Wordle::guess(const std::string& word)
 
 std::string Wordle::get_word(const std::string& filename)
 {
+/*
+BUG: My compiler 9.4.0 does not have std::time()
+uncomment below to compile on a more recent compiler
+*/
     std::srand(/*std::*/time(nullptr));
 
     std::vector<std::string> result;
